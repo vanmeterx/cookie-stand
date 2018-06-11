@@ -2,7 +2,7 @@
 The Week 2 Assignment
 
 # Build status
-Initial setup, planning for js/css/html
+Initial commits of blank files, planning for js/css/html
 
 # Code style
 HTML, CSS, Javascript
