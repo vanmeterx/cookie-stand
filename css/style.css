@@ -1,8 +1,12 @@
-/* 
 
+h1 {
+  font-family: 'Candal', sans-serif;
+  text-align: center;
+}
 p {
   font-family: 'Quattrocento', serif;
 }
-h1 {
-  font-family: 'Rammetto One', cursive;
+
+body {
+  background-color: mediumseagreen
 }
