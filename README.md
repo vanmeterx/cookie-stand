@@ -1,13 +1,13 @@
 # cookie-stand
 The Week 2 Assignment
 
-#Build status
+# Build status
 Initial setup, planning for js/css/html
 
-Code style
+# Code style
 HTML, CSS, Javascript
 
-Tech/framework used
+# Tech/framework used
 Constructed using Visual Studio Code...
 
 and coffee, diet mt dew, and water.
