@@ -2,12 +2,28 @@
 
 //Monday Lab
 
+/* need to add this to each object i tihnk?
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
+*/
 var pike = {
   name: '1st and Pike',
   minCust: 23,
   maxCust: 65,
-  avgCookie: 6.3
+  avgCookie: 6.3,
+
+  custPerHour: function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (this.maxCust - this.minCust)) + min;
+  }
 };
+console.log(pike);
 
 var seaTac = {
   name: 'SeaTac Airport',
