@@ -112,7 +112,7 @@ function storeData(location,id){
   var locationlist=document.getElementById(id);
   for(var liIndex=0; liIndex<location.hourlyArray.length; liIndex++){
     var li=document.createElement('li');
-    var listString=hours[liIndex]+': '+location.hourlyArray[liIndex]+' cookies.';
+    var listString=hours[liIndex]+': '+location.hourlyArray[liIndex]+' cookies';
     li.textContent=listString;
     locationlist.appendChild(li);
   }

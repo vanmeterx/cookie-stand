@@ -3,6 +3,13 @@ h1 {
   font-family: 'Candal', sans-serif;
   text-align: center;
 }
+
+h2 {
+  font-family: 'Candal', sans-serif;
+  text-align: center;
+  color: #343565;
+}
+
 p {
   font-family: 'Quattrocento', serif;
 }
@@ -11,13 +18,13 @@ body {
   background-color: #c0e2ca;
 }
 
-floater {
+.floater {
   background-color: #fefacb;
-    padding: 10px;
-    border-width: 300px;
+    padding: 5px;
+    border-width: 100%;
     margin-top: 60px;
     margin-left: 60px;
     float: left;
+    border-radius: 10px;
 
 }
-]
