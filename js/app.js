@@ -92,35 +92,40 @@ var alki = {
   },
 };
 
-function simlulate() {
-  pike.custPerHour();
-  pike.cookiesBought();
-  seaTac.custPerHour();
-  seaTac.cookiesBought();
-  seaCenter.custPerHour();
-  seaCenter.cookiesBought();
-  capHill.custPerHour();
-  capHill.cookiesBought();
-  alki.custPerHour();
-  alki.cookiesBought();
-}
-
 var hours=['6:00am','7:00am','8:00am','9:00am','10:00am','11:00am','12:00pm','1:00pm','2:00pm',
   '3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm'];
 
-function storeData(location,id){
+function simulateAndDisplayStoreData(location,id){
+  location.cookiesBought();
+
   var locationlist=document.getElementById(id);
-  for(var liIndex=0; liIndex<location.hourlyArray.length; liIndex++){
+
+  var cookieTotal = 0;
+
+  for(var i = 0; i < location.hourlyArray.length; i++){
+    var cookiesForThisHour = location.hourlyArray[i];
+
+    cookieTotal = cookieTotal + cookiesForThisHour;
+    console.log({ cookiesForThisHour, cookieTotal });
+
+    var listString=hours[i] + ': ' + cookiesForThisHour + ' cookies.';
+
+    // Create <li> with that string, and add to <ul>
     var li=document.createElement('li');
-    var listString=hours[liIndex]+': '+location.hourlyArray[liIndex]+' cookies';
     li.textContent=listString;
     locationlist.appendChild(li);
   }
+
+  var totalLI = document.createElement('li');
+  locationlist.appendChild(totalLI);
+
+  var totalStrong = document.createElement('strong');
+  totalStrong.textContent = 'Total: ' + cookieTotal;
+  totalLI.appendChild(totalStrong);
 }
 
-simlulate();
-storeData(pike,'pike');
-storeData(seaTac,'seaTac');
-storeData(seaCenter,'seaCenter');
-storeData(capHill,'capHill');
-storeData(alki,'alki');
+simulateAndDisplayStoreData(pike,'pike');
+simulateAndDisplayStoreData(seaTac,'seaTac');
+simulateAndDisplayStoreData(seaCenter,'seaCenter');
+simulateAndDisplayStoreData(capHill,'capHill');
+simulateAndDisplayStoreData(alki,'alki');
