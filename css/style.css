@@ -8,5 +8,16 @@ p {
 }
 
 body {
-  background-color: mediumseagreen
+  background-color: #c0e2ca;
 }
+
+floater {
+  background-color: #fefacb;
+    padding: 10px;
+    border-width: 300px;
+    margin-top: 60px;
+    margin-left: 60px;
+    float: left;
+
+}
+]
