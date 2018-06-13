@@ -48,6 +48,9 @@ body {
   background-color: #fbc8b3;
   margin-top: 10px;
 }
+table {
+  border: black 1px;
+}
 
 /*.p-form {
  >>in case i need it<< 
