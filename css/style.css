@@ -29,7 +29,6 @@ body {
   border-width: 80%;
   margin-right: 20px;
   margin-left: 20px;
-  float: left;
   border-radius: 10px;
 }
 .forms {
@@ -44,6 +43,12 @@ body {
   background-color: #c0e2ca;
   margin-top: 10px;
 }
+
+.test {
+  background-color: #fbc8b3;
+  margin-top: 10px;
+}
+
 /*.p-form {
  >>in case i need it<< 
 }*/
