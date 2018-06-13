@@ -9,16 +9,17 @@ function shop (name, minCust, maxCust, avgCookie) {
   this.maxCust = maxCust;
   this.avgCookie = avgCookie;
   this.hourlyArray = [];
-};
+}
 
 shop.prototype.custPerHour = function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+  return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 };
 
 shop.prototype.cookiesBought = function() {
   for(var i = 0; i < 15; i++){
     this.hourlyArray[i] = Math.floor(this.custPerHour() * this.avgCookie);
-  };
+  }
+};
 
 var pike = new shop('1st and Pike', 23, 65, 6.3);
 
@@ -52,7 +53,7 @@ function simulateAndDisplayStoreData(location,id){
     var li=document.createElement('li');
     li.textContent=listString;
     locationlist.appendChild(li);
-  };
+  }
 
   var totalLI = document.createElement('li');
   locationlist.appendChild(totalLI);
@@ -60,7 +61,7 @@ function simulateAndDisplayStoreData(location,id){
   var totalStrong = document.createElement('strong');
   totalStrong.textContent = 'Total: ' + cookieTotal;
   totalLI.appendChild(totalStrong);
-};
+}
 
 simulateAndDisplayStoreData(pike,'pike');
 simulateAndDisplayStoreData(seaTac,'seaTac');
