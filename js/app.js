@@ -11,6 +11,8 @@ function shop (name, minCust, maxCust, avgCookie) {
   this.hourlyArray = [];
 }
 
+//note: declared functions do not need ';' after the '}'
+
 shop.prototype.custPerHour = function() {
   return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 };
