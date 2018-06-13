@@ -1,96 +1,34 @@
 'use strict';
 
 //Monday Lab
+//Tuesday
 
-var pike = {
-  name: '1st and Pike',
-  minCust: 23,
-  maxCust: 65,
-  avgCookie: 6.3,
-  hourlyArray:[],
+function shop (name, minCust, maxCust, avgCookie) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookie = avgCookie;
+  this.hourlyArray = [];
+};
 
-  custPerHour: function() {
+shop.prototype.custPerHour = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-  },
-
-  //next section came from code review: Day 7
-  cookiesBought: function(){
-    for(var i = 0; i < 15; i++){
-      this.hourlyArray[i] = Math.floor(this.custPerHour() * this.avgCookie);
-    }
-  },
 };
 
-var seaTac = {
-  name: 'SeaTac Airport',
-  minCust: 3,
-  maxCust: 24,
-  avgCookie: 1.2,
-  hourlyArray:[],
+shop.prototype.cookiesBought = function() {
+  for(var i = 0; i < 15; i++){
+    this.hourlyArray[i] = Math.floor(this.custPerHour() * this.avgCookie);
+  };
 
-  custPerHour: function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
-  },
-  cookiesBought: function(){
-    for(var i = 0; i < 15; i++){
-      this.hourlyArray[i] = Math.floor(this.custPerHour() * this.avgCookie);
-    }
-  },
-};
+var pike = new shop('1st and Pike', 23, 65, 6.3);
 
-var seaCenter = {
-  name : 'Seattle Center',
-  minCust : 11,
-  maxCust: 38,
-  avgCookie: 3.7,
-  hourlyArray:[],
+var seaTac = new shop('SeaTac Airport', 3, 24, 1.2);
 
-  custPerHour: function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
-  },
-  cookiesBought: function(){
-    for(var i = 0; i < 15; i++){
-      this.hourlyArray[i] = Math.floor(this.custPerHour() * this.avgCookie);
-    }
-  },
-};
+var seaCenter = new shop('Seattle Center', 11, 38, 3.7);
 
-var capHill = {
-  name: 'Capitol Hill',
-  minCust: 20,
-  maxCust: 38,
-  avgCookie: 2.3,
-  hourlyArray:[],
+var capHill = new shop('Capitol Hill', 20, 38, 2.3);
 
-  custPerHour: function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
-  },
-
-  cookiesBought: function(){
-    for(var i = 0; i < 15; i++){
-      this.hourlyArray[i] = Math.floor(this.custPerHour() * this.avgCookie);
-    }
-  },
-};
-
-var alki = {
-  name: 'Alki',
-  minCust: 2,
-  maxCust: 16,
-  avgCookie: 4.6,
-  hourlyArray:[],
-
-
-  custPerHour: function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
-  },
-
-  cookiesBought: function(){
-    for(var i = 0; i < 15; i++){
-      this.hourlyArray[i] = Math.floor(this.custPerHour() * this.avgCookie);
-    }
-  },
-};
+var alki = new shop('Alki', 2, 16, 4.6);
 
 var hours=['6:00am','7:00am','8:00am','9:00am','10:00am','11:00am','12:00pm','1:00pm','2:00pm',
   '3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm'];
@@ -106,7 +44,7 @@ function simulateAndDisplayStoreData(location,id){
     var cookiesForThisHour = location.hourlyArray[i];
 
     cookieTotal = cookieTotal + cookiesForThisHour;
-    console.log({ cookiesForThisHour, cookieTotal });
+    console.log({ cookiesForThisHour, cookieTotal});
 
     var listString=hours[i] + ': ' + cookiesForThisHour + ' cookies.';
 
@@ -114,7 +52,7 @@ function simulateAndDisplayStoreData(location,id){
     var li=document.createElement('li');
     li.textContent=listString;
     locationlist.appendChild(li);
-  }
+  };
 
   var totalLI = document.createElement('li');
   locationlist.appendChild(totalLI);
@@ -122,7 +60,7 @@ function simulateAndDisplayStoreData(location,id){
   var totalStrong = document.createElement('strong');
   totalStrong.textContent = 'Total: ' + cookieTotal;
   totalLI.appendChild(totalStrong);
-}
+};
 
 simulateAndDisplayStoreData(pike,'pike');
 simulateAndDisplayStoreData(seaTac,'seaTac');
