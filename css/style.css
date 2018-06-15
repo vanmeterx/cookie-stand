@@ -10,6 +10,11 @@ h2 {
   color: #343565;
 }
 
+h3 {
+  font-family: 'Candal', sans-serif;
+  color: #343565;
+}
+
 p {
   font-family: 'Quattrocento', serif;
 }
@@ -24,6 +29,29 @@ body {
   border-width: 80%;
   margin-right: 20px;
   margin-left: 20px;
-  float: left;
   border-radius: 10px;
 }
+.forms {
+  background-color: #82ca9c;
+  border-radius: 5px, 10px, 10px, 10px;
+  padding: 10px;
+  border-width: 0px;
+  font-weight: bold;
+  font-family: 'Quattrocento', serif;
+}
+.space {
+  background-color: #c0e2ca;
+  margin-top: 10px;
+}
+
+.test {
+  background-color: #fbc8b3;
+  margin-top: 10px;
+}
+table {
+  border: black 1px;
+}
+
+/*.p-form {
+ >>in case i need it<< 
+}*/
