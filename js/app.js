@@ -42,14 +42,11 @@ var theadtr = document.createElement('tr');
 
 var totalFooter = document.createElement('tfoot');
 
-
 var salesTable = document.getElementById('salesData');
-
 
 
 salesTable.appendChild(thead);
 thead.appendChild(theadtr);
-
 salesTable.appendChild(totalFooter);
 
 
@@ -88,7 +85,6 @@ function simulateAndDisplayStoreData(location,id){ //displays store data
     var cookiesForThisHour = location.hourlyArray[i];
 
     cookieTotal = cookieTotal + cookiesForThisHour;
-    console.log({ cookiesForThisHour, cookieTotal});
 
     var listString = cookiesForThisHour + ' cookies.';
 
