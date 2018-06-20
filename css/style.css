@@ -27,7 +27,9 @@ h1 {
 h2 {
   font-family: 'Candal', sans-serif;
   text-align: center;
-  color: #343565;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  color: rgb(241, 235, 176);
 }
 
 h3 {
@@ -37,6 +39,11 @@ h3 {
 
 p {
   font-family: 'Quattrocento', serif;
+  hyphens: none;
+  text-align: justify;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  color: rgb(180, 172, 172);
 }
 
 body {
@@ -73,6 +80,40 @@ table {
   border: black 1px;
 }
 
+.crop {
+  width: 1075px;
+  height: 419px;
+  border-radius: 15vpx;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.crop img {
+  width: 1368;
+  height: 912;
+  margin: -75px 0 0 -100px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.order {
+  float: left;
+  position: relative;
+  left: 746px;
+  top: -385px;
+  height: 384px;
+  width: 437px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+  
 /*.p-form {
  >>in case i need it<< 
 }*/
