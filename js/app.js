@@ -1,8 +1,5 @@
 'use strict';
 
-//Monday Lab
-//Tuesday
-
 function Shop (name, minCust, maxCust, avgCookie) {
   this.name = name;
   this.minCust = minCust;
@@ -10,8 +7,6 @@ function Shop (name, minCust, maxCust, avgCookie) {
   this.avgCookie = avgCookie;
   this.hourlyArray = [];
 }
-
-//note: declared functions do not need ';' after the '}'
 
 Shop.prototype.custPerHour = function() {
   return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
@@ -59,17 +54,6 @@ for(var i = 0; i < hours.length; i++){
 
   console.log(businessHours);
 }
-/* taken from inside table data
-
-var totalStrong = document.createElement('strong');
-totalStrong.textContent = cookieTotal;
-totalFooter.appendChild(totalStrong);
-
-
-*/
-
-
-
 
 function simulateAndDisplayStoreData(location,id){ //displays store data
   location.cookiesBought();
@@ -86,14 +70,40 @@ function simulateAndDisplayStoreData(location,id){ //displays store data
 
     cookieTotal = cookieTotal + cookiesForThisHour;
 
-    var listString = cookiesForThisHour + ' cookies.';
+    var listString = cookiesForThisHour + ' cookies';
 
     var td = document.createElement('td');
     td.textContent = listString;
     tr.appendChild(td);
 
   }
+
+  /* taken from inside table data to use in footer
+
+var totalStrong = document.createElement('strong');
+totalStrong.textContent = cookieTotal;
+totalFooter.appendChild(totalStrong);
+
+*/
+
+
+  //taken from above, thinking i need it for footer:
+
+  for(var i = 0; i < location.hourlyArray.length; i++){
+    var cookiesForThisHour = location.hourlyArray[i];
+
+    cookieTotal = cookieTotal + cookiesForThisHour;
+
+    var listString = cookiesForThisHour + ' cookies';
+
+    var td = document.createElement('td');
+    td.textContent = listString;
+    tr.appendChild(td);
+  
 }
+
+
+
 simulateAndDisplayStoreData(pike,'pike');
 simulateAndDisplayStoreData(seaTac,'seaTac');
 simulateAndDisplayStoreData(seaCenter,'seaCenter');

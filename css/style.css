@@ -30,6 +30,9 @@ h2 {
   font-size: 2em;
   margin-bottom: 1.5em;
   color: rgb(241, 235, 176);
+  padding-top: 7%;
+   padding-left: 50%;
+/*I added padding here, as the only h2 element is on index.html. */
 }
 
 h3 {
@@ -44,6 +47,8 @@ p {
   font-size: 1.25em;
   line-height: 1.25em;
   color: rgb(180, 172, 172);
+  padding-left: 56%;
+  padding-right: 7%;
 }
 
 body {
@@ -83,15 +88,9 @@ table {
 .crop {
   width: 1075px;
   height: 419px;
-  border-radius: 15vpx;
+  border-radius: 15px;
   overflow: hidden;
   margin: 0 auto;
-}
-
-.crop img {
-  width: 1368;
-  height: 912;
-  margin: -75px 0 0 -100px;
 }
 
 header {
@@ -99,12 +98,16 @@ header {
 }
 
 .order {
-  float: left;
-  position: relative;
+  background-image: url(../img/cookies.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 auto;
   left: 746px;
   top: -385px;
-  height: 384px;
-  width: 437px;
+  height: 540px;
+  width: 1000px;
 }
 
 footer {
