@@ -7,7 +7,7 @@ function Shop (name, minCust, maxCust, avgCookie) {
   this.avgCookie = avgCookie;
   this.hourlyArray = [];
 }
-
+//radonmizes number
 Shop.prototype.custPerHour = function() {
   return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
 };
@@ -39,11 +39,8 @@ var totalFooter = document.createElement('tfoot');
 
 var salesTable = document.getElementById('salesData');
 
-
 salesTable.appendChild(thead);
 thead.appendChild(theadtr);
-salesTable.appendChild(totalFooter);
-
 
 for(var i = 0; i < hours.length; i++){
   var businessHours = hours[i];
@@ -55,12 +52,18 @@ for(var i = 0; i < hours.length; i++){
   console.log(businessHours);
 }
 
-function simulateAndDisplayStoreData(location,id){ //displays store data
+var HourOneCookies = [];
+
+//TODO: convert the first total array to ... a prototype?
+
+function simulateAndDisplayStoreData(location,id){ //displays the store data
   location.cookiesBought();
 
   var cookieTotal = 0;
 
   var tr = document.createElement('tr');
+
+  HourOneCookies.push(location.hourlyArray[0]); //creates an array from the hour 1 data
 
   tr.setAttribute('id', id);
   salesTable.appendChild(tr);
@@ -75,37 +78,27 @@ function simulateAndDisplayStoreData(location,id){ //displays store data
     var td = document.createElement('td');
     td.textContent = listString;
     tr.appendChild(td);
-
   }
-
-  /* taken from inside table data to use in footer
-
-var totalStrong = document.createElement('strong');
-totalStrong.textContent = cookieTotal;
-totalFooter.appendChild(totalStrong);
-
-*/
-
-
-  //taken from above, thinking i need it for footer:
-
-  for(var i = 0; i < location.hourlyArray.length; i++){
-    var cookiesForThisHour = location.hourlyArray[i];
-
-    cookieTotal = cookieTotal + cookiesForThisHour;
-
-    var listString = cookiesForThisHour + ' cookies';
-
-    var td = document.createElement('td');
-    td.textContent = listString;
-    tr.appendChild(td);
-  
 }
 
+function arraySum() {
+  var sum = 0;
+  console.log(HourOneCookies.length);
+  for (var i = 0; i < HourOneCookies.length; i++){
+    sum += HourOneCookies[i];
+  }
 
+  var hourOneTotal = document.createElement('td');
+  hourOneTotal.textContent = sum;
+  totalFooter.appendChild(hourOneTotal);
+}
 
 simulateAndDisplayStoreData(pike,'pike');
 simulateAndDisplayStoreData(seaTac,'seaTac');
 simulateAndDisplayStoreData(seaCenter,'seaCenter');
 simulateAndDisplayStoreData(capHill,'capHill');
 simulateAndDisplayStoreData(alki,'alki');
+
+salesTable.appendChild(totalFooter);
+
+arraySum();
