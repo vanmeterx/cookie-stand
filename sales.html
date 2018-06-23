@@ -7,17 +7,28 @@
 <body>
 <header><h1>Pat's Salmon Cookies: Sales</h1>
 </header>
+<nav>
+  <ul>
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="http://www.agbizcenter.org/business-services/farm-to-institution/farm-to-table-store">Proud Sponsors of 
+        Farm to Table</a>
+    </li>
+  </ul>
+</nav>
 <div class="forms">
   <form>
-    <h3>Add Your Store Information:</h2>
-    <p>Store Location:</p>
-    <input type="text" name="Store Location:">
-    <p>Minimum Customers per Day:</p>
-    <input type="text" name="Minimum Customer:">
-    <p>Maximum Customer per Day:</p>
-    <input type="text" name="Maximum Customer:">
-    <p>Average Number of Cookies per Customer: </p>
-    <input type="text" name="Average Number of Cookies">
+    <h3>Add Your Store Information:</h3>
+    <label for="loc">Store Location:</label>
+    <input type="text" name="Store Location" id="loc">
+    <label for="minCust">Minimum Customers per Day:</label>
+    <input type="number" min="0" step="0.1" name="Minimum Customer" id="minCust">
+    <label for="maxCust">Maximum Customer per Day:</label>
+    <input type="number" min="0" step="0.1" name="Maximum Customer" id="maxCust">
+    <label for="avgCookCust">Average Number of Cookies per Customer: </label>
+    <input type="number" min="0" step="0.1" name="Average Number of Cookies per Customers" id="avgCookCust">
   </form>
 </div>
 <div class="space">
@@ -29,6 +40,11 @@
   <table id="salesData">
   </table>
 </div>
+<footer>
+    <p>
+      &copy; vanmeterx 2018
+     </p>
+     </footer>
 <script src="js/app.js"></script>
   </body>
 </html>
