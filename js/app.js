@@ -83,6 +83,8 @@ function simulateAndDisplayStoreData(location,id){ //displays the store data
 //TODO: change so this populates the whole row and not just the first cell.
 
 
+
+
 function arraySum() {
   var sum = 0;
   console.log(HourOneCookies.length);
