@@ -54,7 +54,6 @@ for(var i = 0; i < hours.length; i++){
 
 var HourOneCookies = [];
 
-//TODO: convert the first total array to ... a prototype?
 
 function simulateAndDisplayStoreData(location,id){ //displays the store data
   location.cookiesBought();
@@ -63,7 +62,7 @@ function simulateAndDisplayStoreData(location,id){ //displays the store data
 
   var tr = document.createElement('tr');
 
-  HourOneCookies.push(location.hourlyArray[0]); //creates an array from the hour 1 data
+  HourOneCookies.push(location.hourlyArray[0]); //creates an array from the hour 1 data into the footer
 
   tr.setAttribute('id', id);
   salesTable.appendChild(tr);
@@ -80,6 +79,11 @@ function simulateAndDisplayStoreData(location,id){ //displays the store data
     tr.appendChild(td);
   }
 }
+
+//TODO: change so this populates the whole row and not just the first cell.
+
+
+
 
 function arraySum() {
   var sum = 0;
