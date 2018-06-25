@@ -70,7 +70,6 @@ p {
 body {
   background-image: url("../img/cloth.jpg");
   background-size: 10%;
-  text-align:
 }
 
 .floater {
@@ -91,6 +90,11 @@ body {
   margin: 0 auto;
 }
 
+.business {
+  display: inline;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 30%;
 }
 
 form{
@@ -132,6 +136,7 @@ header {
   top: -385px;
   height: 540px;
   width: 1000px;
+  margin-bottom: 2.5%;
 }
 
 .tableTitle {
