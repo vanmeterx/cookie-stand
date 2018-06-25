@@ -89,7 +89,8 @@ body {
   width: 82.5%;
   margin: 0 auto;
 }
-
+/* this .business class works on my machine, and live-server
+but doesn't transfer to git.io's verions for some reason*/
 .business {
   display: inline;
   text-align: center;
